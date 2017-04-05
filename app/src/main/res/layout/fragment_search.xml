@@ -1,0 +1,57 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.pdiaz.testapp.Search"
+    android:orientation="vertical">
+    <LinearLayout android:id="@+id/search_box"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1">
+        <EditText
+            android:id="@+id/in_query"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.75"/>
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:text="Buscar"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_search_container"
+        android:orientation="vertical">
+
+        <ListView android:id="@+id/historial"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"/>
+        <ListView android:id="@+id/search_result"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:horizontalSpacing="5dp"
+            android:verticalSpacing="5dp"/>
+        <TextView android:id="@+id/no_results"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/no_results"/>
+        <ProgressBar android:id="@+id/spinner"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
+        </RelativeLayout>
+
+
+
+
+</LinearLayout>
